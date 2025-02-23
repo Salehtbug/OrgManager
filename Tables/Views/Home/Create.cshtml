@@ -1,0 +1,27 @@
+﻿
+@{
+    ViewData["Title"] = "Create";
+}
+
+@model Department
+
+<h2>Add a New Department</h2>
+
+<form asp-action="Create" method="post">
+    <div class="form-group">
+        <label>Department Name</label>
+        <input asp-for="DepartmentName" class="form-control" required />
+    </div>
+    <div class="form-group">
+        <label>Manager</label>
+        <input asp-for="Manager" class="form-control" />
+    </div>
+    <div class="form-group">
+        <label>Location</label>
+        <input asp-for="Location" class="form-control" />
+    </div>
+    <button type="submit" class="btn btn-primary">Save</button>
+</form>
+<br />
+
+<a href="@Url.Action("Index")" class="btn btn-secondary">Back to List</a>

@@ -1,0 +1,28 @@
+﻿
+@model List<Department>
+
+<h2>Department List</h2>
+
+<a href="@Url.Action("Create")" class="btn btn-success">Add New Department</a>
+<br />
+<br />
+
+<table class="table table-bordered">
+    <tr>
+        <th>Department Name</th>
+        <th>Manager</th>
+        <th>Location</th>
+        <th>InputDate</th>
+
+    </tr>
+    @foreach (var department in Model)
+    {
+        <tr>
+            <td>@Html.DisplayFor(modelItem => department.DepartmentName)</td>
+            <td>@Html.DisplayFor(modelItem => department.Manager)</td>
+            <td>@Html.DisplayFor(modelItem => department.Location)</td>
+            <td>@Html.DisplayFor(modelItem => department.CreatedDate)</td>
+        </tr>
+    }
+</table>
+
